@@ -1,7 +1,7 @@
 package finalproyect;
 
 public class Cells {	
-	Boolean isFlag;
+	Boolean isFlag = false;
 	Boolean isMine = false;
 	char typeCell;
 	Boolean isUncover= false;

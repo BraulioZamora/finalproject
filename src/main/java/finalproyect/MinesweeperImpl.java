@@ -7,6 +7,7 @@ public class MinesweeperImpl implements Minesweeper{
     
     public MinesweeperImpl(int row , int col){
     	Boolean gameOver = false;
+    	Boolean winningGame = false;
     	Cells[][] grid = new Cells[row][col];
     	int cantidadMinas = (int) Math.rint(grid.length * grid[0].length*0.15);
     	int cantidadCeldas;
@@ -118,7 +119,7 @@ public class MinesweeperImpl implements Minesweeper{
     	     this.gameOver = true;
            } else if (this.cell.ThereIsMine == false && this.cantidadCeldas < row*col-cantidadMinas)
            {
-        	   this.winingGame =true;
+        	   this.winningGame =true;
         	   this.gameOver = true;
            }
 	}
@@ -134,16 +135,13 @@ public class MinesweeperImpl implements Minesweeper{
 	}
 
 	public boolean isGameOver() {
-		return true;
-	} else {return false;}
+		return gameOver;
 	}
 
-	public boolean isWinningGame() {
-		if( this.isGameOver() && this.cell.){
-			return true;
-		}
-		return false;
-	}
+	public boolean isWinningGame() 
+	 {
+	  return winningGame;	
+	 }
 
 	public void display() {
 		// TODO Auto-generated method stub
