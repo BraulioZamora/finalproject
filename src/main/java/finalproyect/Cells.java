@@ -1,24 +1,44 @@
 package finalproyect;
 
 public class Cells {	
-	Boolean IsFlag;
+	Boolean isFlag;
+	Boolean isMine = false;
+	char typeCell;
+	Boolean isUncover= false;
+	int minasCerca;
 	
 	void uncover(int row, int col);{
-		if(GridCells.getValue.equals(-1)){
-			this.isGameOver
-		}
+		if (this.isUncover=false && )
+		if(this.ThereIsMine = True)
+		 {
+			
+		 }
 	
 	}
 	
 	void flagAsMine(int row, int col);{
-		this.IsFlag = true;
+		this.isFlag = true;
 	}
 	
 	void clearFlag(int row, int col);{
-		this.IsFlag = false;
+		this.isFlag = false;
+	}
+	
+	public void colocarMina(){
+		this.isMine = True
 	}
     boolean ThereIsMine(){
-   
-    	return true;
+    return isMine;
     }
+    
+    public void setValue(int minasCerca)
+    {
+    	this.minasCerca = minasCerca
+    }
+    
+    public int getValue()
+    {
+    	return minasCerca
+    }
+   
 }
